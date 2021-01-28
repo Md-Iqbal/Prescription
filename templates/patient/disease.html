@@ -1,0 +1,61 @@
+{% extends "patient/base.html" %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="mx-0 my-4 card effect-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="card-body px-5">
+                    <h4 class="d-inline-block">Diseases History of </h4>
+                    <h1 class="text-danger text-left d-inline-block">{{ request.user }}</h1>
+                </div>
+                <hr style="border: 3px solid cadetblue !important;">
+            </div>
+            <div class="col-12 px-5">
+                    <span>
+                        <h5 class="d-inline-block"><b><u class="text-uppercase">Drug list: </u></b></h5>
+                    </span>
+                <div style="padding-left: 110px; padding-right: 40px;">
+                    <table class="table table-striped">
+                        <thead style="background-color: #546263;">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Disease Name</th>
+                                <th scope="col">Doctor Name(who prescribed)</th>
+                                <th scope="col">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>dementia</td>
+                                <td>Mr. xyz</td>
+                                <td>2020/12/25</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>dementia</td>
+                                <td>Mr. xyz</td>
+                                <td>2020/12/25</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>dementia</td>
+                                <td>Mr. xyz</td>
+                                <td>2020/12/25</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>dementia</td>
+                                <td>Mr. xyz</td>
+                                <td>2020/12/25</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <hr style="border: 3px solid cadetblue !important; margin-bottom: 50px;">
+    </div>
+</div>
+{% endblock content %}

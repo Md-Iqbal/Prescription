@@ -1,0 +1,10 @@
+asgiref==3.3.1
+Django==3.1.4
+django-crispy-forms==1.10.0
+html5lib==1.1
+lockfile==0.12.2
+Pillow==8.0.1
+psycopg2==2.8.6
+sqlparse==0.4.1
+virtualenv==20.2.2
+virtualenvwrapper-win==1.2.6

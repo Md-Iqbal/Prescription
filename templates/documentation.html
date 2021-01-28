@@ -1,0 +1,281 @@
+{% extends "main_template.html" %}
+
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="mx-0 my-4 card effect-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="card-body px-5">
+                    <h1 class="text-danger text-center">Prescription</h1><br>
+                    <div class="d-flex">
+                        <img src="{% static 'images/varsity.png' %}" alt="Prescription"
+                            style="width: 400px;height: 100px;display: block;margin-left: auto;margin-right: auto;">
+                    </div>
+                </div>
+                <hr style="border: 5px solid cadetblue !important;">
+            </div>
+            <div class="col-md-6 pl-5">
+                <h2><u>Submitted To</u></h2>
+                <p>
+                    Ridwanullah Yousuf <br>
+                    Lecturer <br>
+                    Department of Software Engineering <br>
+                    Daffodil International University <br>
+                </p>
+                <hr style="border: 5px solid cadetblue !important;">
+            </div>
+            <div class="col-md-6 pr-5">
+                <h2><u>Submitted By</u></h2>
+                <p>
+                    Abu Sayeed Md Iqbal Majumder --> 181-35-2308 <br>
+                    Md Belal Hossain--> 181-35-2314 <br>
+                    Department of Software Engineering <br>
+                    Daffodil International University <br>
+                </p>
+                <hr style="border: 5px solid cadetblue !important;">
+            </div>
+            <div class="col-12 px-5">
+                <hr style="border: 5px solid cadetblue !important;">
+                <h2><u class="text-uppercase">User Guideline</u></h2>
+                
+                <video controls style="max-width: 100%;height: 584px;display: block;margin-left: auto;margin-right: auto;">
+                    <source src="{% static 'images/user menual.mp4' %}" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+            </div>
+            <div class="col-12 px-5">
+                <hr style="border: 5px solid cadetblue !important;">
+                <h2><u class="text-uppercase">Our Idea</u></h2>
+                <ul>
+                    <li>
+                        This application is committed to improving the quality of life of people at all levels of the
+                        medical department.
+                    </li>
+                    <li>
+                        This application will store the necessary information for everyone. In addition, will supply /
+                        invoice if required.
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 px-5">
+                <hr style="border: 5px solid cadetblue !important;">
+                <h2><u class="text-uppercase">Motivation</u></h2>
+                <ul>
+                    <li>
+                        Human society is constantly working tirelessly for the progress of human civilization and the
+                        improvement of human life.
+                    </li>
+                    <li>
+                        Provide accurate information on when the incidence of a disease is increasing and decreasing. It
+                        will give accurate
+                        information about the percentage of any disease.
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 px-5">
+                <hr style="border: 5px solid cadetblue !important;">
+                <h2><u class="text-uppercase">Requirements</u></h2>
+                <p>
+                    Requirement is something that is needed or that must be done. As we are deploying our own web based
+                    software, the
+                    requirements are given below are from our consideration and if our customer need more we will
+                    obviously provide them
+                    after the next maintenance.
+                </p>
+                <h4>Raw requirements:</h4>
+                <ul>
+                    <li>
+                        This must be a web based system
+                    </li>
+                    <li>
+                        There will some introductory pages for non-registered users.
+                        <ul>
+                            <li>These pages will contain home, about, services, advice from admin and contact pages.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>There will be a log in option for registered users and a sign in option for non-registered users
+                        if they are
+                        interested with this system.</li>
+                    <li>User can follow any doctor if they want</li>
+                    <li>User may have a post option, which will help them to express their sickness among the followed
+                        doctors and their
+                        friends whom they followed.</li>
+                    <li>User can store their all prescription and drug list and even their lab report also.</li>
+                    <li>Patient can message if he/she has an appointment of that doctor.</li>
+                    <li>Doctor can see patient’s prescription, drug list and lab report too.</li>
+                    <li>A doctor can have both doctor id and a patient id.</li>
+                </ul>
+                <h4>Functional requirements:</h4>
+                <ol>
+                    <li>Web based system.</li>
+                    <li>Five web pages like Home, Services, Advice, About, Contact for a visitor.</li>
+                    <li>Log in.</li>
+                    <li>Sign in.</li>
+                    <li>Option for creating a post.</li>
+                    <li>Option to follow someone.</li>
+                    <li>Specific panel for prescription, drug history, lab report, .</li>
+                    <li>Messaging option between doctor and patient.</li>
+                    <li>Doctors are able to see the patient’s total history</li>
+                    <li>Web system should be responsive.</li>
+                    <li>User can send review via contact page.</li>
+                    <li>All info should be filled while login or sign up.</li>
+                </ol>
+                <h4>Non-Functional requirements:</h4>
+                <ol>
+                    <li><strong><u>Security:</u> </strong>The software must remain resilient in the face of attacks like
+                        DOS attack or SQLi and XSS/CSRF protected.</li>
+                    <li><strong><u>Accessibility:</u> </strong> People with the widest range of capabilities can use the
+                        system.</li>
+                    <li><strong><u>Availability:</u> </strong>The system is able to function during normal operating
+                        times.</li>
+                    <li><strong><u>Confidentiality:</u> </strong>The system protects sensitive data and allows only
+                        authorized access to the data.</li>
+                    <li><strong><u>Efficiency:</u> </strong>The data are maintained by the software system in terms of
+                        accuracy, authenticity and without corruption.</li>
+                    <li><strong><u>Reliability:</u> </strong>The software system consistently performs the specified
+                        functions without failure.</li>
+                    <li><strong><u>Safety:</u> </strong>The system prevents harm to people or damage to the environment.
+                    </li>
+                    <li><strong><u>Survivability:</u> </strong>The system continues to function and recovers in the
+                        presence of a system failure.</li>
+                    <li><strong><u>Usability:</u> </strong>The user is able to learn operate, prepare inputs and
+                        interpret outputs through interaction with a
+                        software system.</li>
+                </ol>
+            </div>
+            <div class="col-12 px-5">
+                <hr style="border: 5px solid cadetblue !important;">
+                <h2><u class="text-uppercase">Development Platform</u></h2>
+                <ul>
+                    <li>
+                        Django move fast, deploy fast, and also make changes as you move ahead. Built by experienced
+                        developers, Django takes
+                        care of much of the hassle of web development, so you can focus on writing your app without
+                        needing to reinvent the
+                        wheel.
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 px-5">
+                <hr style="border: 5px solid cadetblue !important;">
+                <h2><u class="text-uppercase">Developing Scheduling and Planning</u></h2>
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Task ID</th>
+                            <th scope="col">Task</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Time(days)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">T0</th>
+                            <td>Requirement Gether</td>
+                            <td>10/10/2020 - 25/10/2020</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">T1</th>
+                            <td>Home, services, about, contact</td>
+                            <td>01/11/2020 - 08/11/2020</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">T2</th>
+                            <td>Login, Registration</td>
+                            <td>18/11/2020 - 22/11/2020</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">T3</th>
+                            <td>Post Creation, View, Post Delate</td>
+                            <td>23/11/2020 - 28/11/2020</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">T4</th>
+                            <td>Prescription, report, drug list, disease</td>
+                            <td>02/12/2020 - 08/12/2020</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">T5</th>
+                            <td>Appointment, Inbox</td>
+                            <td>09/12/2020 - 17/12/2020</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">T6</th>
+                            <td>Feedback</td>
+                            <td>18/12/2020 - 19/12/2020</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">T7</th>
+                            <td>Admin Access</td>
+                            <td>20/12/2020 - 24/12/2020</td>
+                            <td>4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-12 px-5">
+                <hr style="border: 5px solid cadetblue !important;">
+                <h2><u class="text-uppercase">Diagrams</u></h2>
+                <h3>Use Case Diagram</h3>
+                <img src="{% static 'images/use_case.png' %}" alt="Use Case Diagram"
+                    style="width: 500px;height: 600px;display: block;margin-left: auto;margin-right: auto;">
+                <h3>Entity Relationship Diagram</h3>
+                <img src="{% static 'images/er-diagram.png' %}" alt="Entity Relationship Diagram"
+                    style="width: 600px;height: 400px;display: block;margin-left: auto;margin-right: auto;">
+                <h3>Sequence Diagram</h3>
+                <img src="{% static 'images/sequence.png' %}" alt="Sequence Diagram"
+                    style="width: 600px;height: 600px;display: block;margin-left: auto;margin-right: auto;">
+                <h3>DFD</h3>
+                <ol>
+                    <li>
+                        <b>Level 0</b>
+                        <img src="{% static 'images/dfd0.png' %}" alt="DFD Level 0"
+                            style="width: 600px;height: 500px;display: block;margin-left: auto;margin-right: auto;">
+                    </li>
+                    <li>
+                        <b>Level 1</b>
+                        <img src="{% static 'images/dfd1.png' %}" alt="DFD Level 1"
+                            style="width: 600px;height: 500px;display: block;margin-left: auto;margin-right: auto;">
+                    </li>
+                    <li>
+                        <b>Level 2</b>
+                        <img src="{% static 'images/dfd2.png' %}" alt="DFD Level 2"
+                            style="width: 600px;height: 500px;display: block;margin-left: auto;margin-right: auto;">
+                    </li>
+            
+                </ol>
+                <h3>Activity Diagram</h3>
+                <img src="{% static 'images/activity_diagram.png' %}" alt="Activity Diagram"
+                    style="width: 600px;height: 600px;display: block;margin-left: auto;margin-right: auto;">
+            </div>
+            <div class="col-12  px-5">
+                <hr style="border: 5px solid cadetblue !important;">
+                <hr class="mb-5" style="border: 5px solid cadetblue !important;">
+                <div class="my-5 text-center">
+                    If you want to Contribute in this project,<a href="https://github.com/Md-Iqbal/Prescription/tree/Developing"
+                        target="_blank">visit here</a>
+                </div>
+            </div>
+            <div class="col-12">
+                <hr style="border: 5px solid cadetblue !important;">
+                <hr class="mb-5" style="border: 5px solid cadetblue !important;">
+                <div class="my-5 text-center">
+                    Special Thanks to <a href="https://www.facebook.com/ridwanullah.yousuf" target="_blank">Ridwanullah
+                        Yousuf</a> for his Guideline
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

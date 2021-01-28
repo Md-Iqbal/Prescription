@@ -1,0 +1,47 @@
+{% extends 'patient/base.html' %}
+
+{% block content %}
+
+<div class="container my-4">
+    {% if not object_list %}
+        <h1>No Result Found!!!</h1>
+    {% else %}
+        {% for i in object_list %}
+            <div class="card my-2">
+                <div class="card-body">
+                    <h2>
+                        <a class="page-header" href="{% url 'patient:userProfileView' i.username %}">{{i.username}}</a>
+                    </h2>
+                    <a type="button" name="button" class="btn btn-outline-info" role="button"
+                        href="{% url 'patient:userProfileView' i.username %}">Click to see details</a>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    {% if is_paginated %}
+    
+        
+        {% if page_obj.number == 1 %}
+            <a href="?page=1" role="button" class="btn btn-primary">First</a>
+        {% else %}
+            <a href="?page=1" role="button" class="btn btn-outline-primary">First</a>
+        {% endif %}
+
+        {% if page_obj.has_previous and page_obj.number != 2 %}
+            <a href="?page={{ page_obj.previous_page_number }}" role="button" class="btn btn-outline-primary">{{ page_obj.previous_page_number }}</a>
+        {% endif %}
+        
+        {% if page_obj.number != 1 %}
+            <a href="?page={{ page_obj.number }}" class="btn btn-primary">{{ page_obj.number }}</a>
+        {% endif %}
+        
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}" role="button" class="btn btn-outline-primary">{{ page_obj.next_page_number }}</a>
+        {% endif %}
+        
+    {% endif %}
+
+</div>
+
+{% endblock content %}

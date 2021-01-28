@@ -1,0 +1,213 @@
+{% extends "patient/base.html" %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="mx-0 my-4 card effect-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="card-body px-5">
+                    <h1 class="text-danger text-left">Doctor Name: Mr. xyz</h1>
+                    <div class="d-flex">
+                        <h3 class="mr-auto">Medical Prescription</h3>
+                        <img src="{% static 'images/icon.jpg' %}" alt="Prescription"
+                            style="vertical-align: middle;width: 150px;height: 150px;border-radius: 50%;">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 px-5">
+                <p>
+                    <span>
+                        <h5 class="d-inline-block"><b><u class="text-uppercase">Patient Name:</u></b></h5>
+                    </span>
+                    Md Belal Hossain
+                </p>
+            </div>
+            <div class="col-md-4">
+                <p>
+                    <span>
+                        <h5 class="d-inline-block"><b><u class="text-uppercase">Date: </u></b></h5>
+                    </span>
+                    25/12/2020
+                </p>
+            </div>
+            <div class="col-md-5 px-5">
+                <p>
+                    <span>
+                        <h5 class="d-inline-block"><b><u class="text-uppercase">Age: </u></b></h5>
+                    </span>
+                    32
+                </p>
+            </div>
+            <div class="col-md-3">
+                <p>
+                    <span>
+                        <h5 class="d-inline-block"><b><u class="text-uppercase">Sex: </u></b></h5>
+                    </span>
+                    Male
+                </p>
+            </div>
+            <div class="col-md-4">
+                <p>
+                    <span>
+                        <h5 class="d-inline-block"><b><u class="text-uppercase">Occupation: </u></b></h5>
+                    </span>
+                    Software Engineer
+                </p>
+            </div>
+            <div class="col-md-5 px-5">
+                <p>
+                    <span>
+                        <h5 class="d-inline-block"><b><u class="text-uppercase">Patient cell no: </u></b></h5>
+                    </span>
+                    01521884157
+                </p>
+            </div>
+            <div class="col-md-3">
+                <p>
+                    <span>
+                        <h5 class="d-inline-block"><b><u class="text-uppercase">Patient ID No: </u></b></h5>
+                    </span>
+                    {{ request.user.id }}
+                </p>
+            </div>
+            <div class="col-md-4">
+                <p>
+                    <span>
+                        <h5 class="d-inline-block"><b><u class="text-uppercase">Health Insurrance No: </u></b></h5>
+                    </span>
+                    {{ request.user.id }}{{ request.user.id }}{{ request.user.id }}{{ request.user.id }}{{ request.user.id }}
+                </p>
+            </div>
+            <div class="col-md-12 px-5">
+                <p>
+                    <span>
+                        <h5 class="d-inline-block"><b><u class="text-uppercase">Patient address: </u></b></h5>
+                        <div style="padding-left: 190px;">
+                            Street: bangabandhu sheikh mujib medical university (bsmmu), shahbagh, 1000
+                            
+                            City: Dhaka
+                            
+                            State/province/area: Dhaka
+                            
+                            Phone number 017 11607918
+                            
+                            Zip code 1000
+                            
+                            Country calling code +880
+                            
+                            Country Bangladesh
+                        </div>
+                    </span>
+                </p>
+            </div>
+            <div class="col-md-12 px-5">
+                <p>
+                    <span>
+                        <h5 class="d-inline-block"><b><u class="text-uppercase">Diagnosed with: </u></b></h5>
+                    </span>
+                    <div style="padding-left: 190px;">
+                        <h5 class="text-danger"><u>Diagnosis of dementia</u></h5>
+                        There is no one test to determine if someone has dementia. Doctors diagnose Alzheimer's and other types
+                        of dementia
+                        based on a careful medical history, a physical examination, laboratory tests, and the characteristic
+                        changes in
+                        thinking, day-to-day function and behavior associated with each type.
+                    </div>
+                
+                </p>
+            </div>
+            <div class="col-md-5 px-5">
+                <p>
+                    <span>
+                        <h5 class="d-inline-block"><b><u class="text-uppercase"> Blood Pressure: </u></b></h5>
+                    </span>
+                    <span class=" pl-2"></span> 80-120 beats per minute <br>
+                    <div style="padding-left: 190px;">
+                        <h5 class="text-danger d-inline-block">Status: </h5> Normal
+                    </div>
+                </p>
+            </div>
+            <div class="col-md-3">
+                <p>
+                    <span>
+                        <h5 class="d-inline-block"><b><u class="text-uppercase">Pulse rate: </u></b></h5>
+                    </span>
+                    80/120 <br>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <p>
+                    <span>
+                        <h5 class="d-inline-block"><b><u class="text-uppercase">Weight: </u></b></h5>
+                    </span>
+                    70 Kilogram <br>
+                </p>
+            </div>
+            <div class="col-md-6 px-5">
+                <p>
+                    <span>
+                        <h5 class="d-inline-block"><b><u class="text-uppercase">Drug list: </u></b></h5>
+                    </span>
+                    <div style="padding-left: 120px;">
+                        <ul class="list-group">
+                            <li class="list-group-item active">Drug Name</li>
+                            <li class="list-group-item">Drug 1</li>
+                            <li class="list-group-item">Drug 2</li>
+                            <li class="list-group-item">Drug 3</li>
+                            <li class="list-group-item">Drug 4</li>
+                        </ul>
+                    </div>
+                
+                </p>
+            </div>
+            <div class="col-md-6">
+                <p>
+                    <div style="padding-right: 120px;" class="mt-5">
+                        <ul class="list-group mr-5">
+                            <li class="list-group-item active">Unit(pec.)</li>
+                            <li class="list-group-item">22</li>
+                            <li class="list-group-item">10</li>
+                            <li class="list-group-item">5</li>
+                            <li class="list-group-item">254</li>
+                        </ul>
+                    </div>
+                </p>
+            </div>
+            <div class="col-md-12 px-5">
+                <p>
+                    <span>
+                        <h5 class="d-inline-block"><b><u class="text-uppercase">Brief: </u></b></h5>
+                    </span>
+                    <div style="padding: 0 70px;">
+                        <p class="border border-danger rounded" style="border-width: 3px !important;">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad in consequatur qui tempore quibusdam
+                            minima tenetur ipsam deleniti voluptatem illo ipsa quia fugit cupiditate, maiores totam! Eveniet
+                            error corporis possimus aspernatur, ipsa deserunt minima quod dolorum! Culpa porro, natus quasi
+                            fugiat, id molestiae delectus sed sapiente debitis cum harum saepe fuga in soluta asperiores,
+                            aliquam vero ullam. Est odit quos recusandae porro sunt odio tempore cupiditate dolore, ducimus quae
+                            quisquam dolor libero consequatur voluptas explicabo assumenda! Ex, nihil odit id laborum ipsa eos
+                            praesentium quia repellat perferendis iste maiores reiciendis qui porro sint! Cum magni
+                            perspiciatis, quod, esse porro voluptate aliquam dignissimos, voluptatum nam excepturi sed
+                            distinctio assumenda illo suscipit blanditiis. Atque deleniti vel, cupiditate nulla aliquam repellat
+                            eius ipsa, aliquid iure voluptate ad magnam cum, perspiciatis debitis praesentium sapiente
+                            doloremque animi expedita consequatur. Porro sint illum distinctio nobis dolorem, alias tenetur.
+                            Fugit iure pariatur vel nulla expedita porro sed, nobis ipsum ut enim corrupti consequatur optio
+                            quisquam magni quis, nisi fugiat tenetur architecto ex tempora minima dignissimos? Necessitatibus
+                            pariatur, eum illum tempore officiis reiciendis aperiam veniam explicabo vero eaque nesciunt omnis
+                            quia provident praesentium, iusto ratione dolores totam beatae, velit quis! Reiciendis consequatur
+                            impedit aut quaerat, ex ut accusantium.
+                        </p>
+                    </div>
+                </p>
+            </div>
+            <div class="col-md-8 px-5"></div>
+            <div class="col-md-4 mt-5">
+                <h5>Doctor's signature: 
+                    <img src="{% static 'images/sig.jpg' %}" alt="Prescription"
+                        style="vertical-align: middle;width: 150px;height: 70px;">
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,123 @@
+{% extends 'patient/base.html' %}
+{% load static %}
+
+{% block postbutton %}
+<!-- Button trigger modal -->
+<div class="container mt-3 col-md-6">
+    <button type="button" class="container btn-outline-primary p-3" data-toggle="modal" data-target="#create_post">
+        <h3>Create post</h3>
+    </button>
+</div>
+
+{% endblock postbutton %}
+
+{% block content %}
+{% for i in posts %}
+
+
+<div class="container col-md-6 my-4" id="{{ i.id }}">
+    <div class="card">
+        <h5 class="card-header">
+            <a href="{% url 'patient:userProfileView' i.user %}">{{i.user}}</a>
+            <small>{{i.dateOFpost.date}}</small>
+        </h5>
+        <div class="card-body">
+            <h5 class="card-title">{{i.caption}}</h5>
+            {% if i.image %}
+            <img src="{{i.image.url}}" alt="Corrupted image" id="post_img" class="img-thumbnail d-block">
+            {% endif %}
+            <hr size="30px">
+
+            <button class="btn btn-info post_viewed" id="{{ i.id }}">
+                {% if i in viewed_post %}
+                    <a href="{% url 'patient:view_ignore_Post' %}" style="color: white;" id="view_post{{ i.id }}">Viewed</a>
+                {% else %}
+                    <a href="{% url 'patient:view_ignore_Post' %}" style="color: white;" id="view_post{{ i.id }}">View</a>
+                {% endif %}
+            </button>
+
+            <button href="#" class="btn btn-warning">Repost</button>
+            {% if i.user == request.user %}
+            <a href="{% url 'patient:deletePostView' i.id %}" class="btn btn-danger float-right delete"
+                id="{{ i.id }}">Delete</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
+
+{% block popup %}
+
+<!-- Modal -->
+<div class="modal fade" id="create_post" tabindex="-1" role="dialog" aria-labelledby="create_postLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="create_postLabel">Share your mind</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="/patient/postViews" method="POST" , enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <label for="image">Image : </label>
+                    <input type="file" id="image" name="image">
+                    <br><br>
+                    <label for="captions">Captions : </label><br>
+                    <textarea name="captions" id="captions" cols="55" rows="10" placeholder="Share what is on your mind"
+                        class="ml-4" required></textarea>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Post</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock popup %}
+
+{% block js %}
+<script>
+
+    $(document).ready(function () {
+        $(".delete").click(function (e) {
+            var id = this.id;
+            var href = this.href;
+            console.log(href, id)
+            e.preventDefault();
+            $.ajax({
+                url: href,
+                data: {},
+            });
+            $("#" + id).fadeOut(1000);
+        })
+
+
+        $(".post_viewed").click(function (e) {
+            e.preventDefault();
+            var id = this.id;
+            var hreference = $('.post_viewed').find('a').attr('href');
+            console.log(hreference, id)
+            $.ajax({
+                url: hreference,
+                data: {
+                    'viewId': id
+                },
+                success: function(response) {
+                    if (response.viewed) {
+                        $("#view_post" + id).html("Viewed")
+                    }
+                    else {
+                        $("#view_post" + id).html("View")
+                    }
+                }
+            })
+        })
+    })
+</script>
+{% endblock js %}
